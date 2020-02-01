@@ -23,7 +23,7 @@ def make_time(array):
     them = []
     for time in array:
         time = str(time//60) + ':' + str(time%60)
-        if len(time) < 4:
+        if (time[-1] == '0') and (time[-2] == ':'):
             time += '0'
             them.append(time)
         else:
